@@ -1,0 +1,18 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fefefe;
+  padding: 20px;
+  text-align: center;
+}
+.hidden { display: none; }
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#answers button {
+  display: block;
+  margin: 10px auto;
+}

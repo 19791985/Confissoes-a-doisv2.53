@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Confissões a Dois</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="intro">
+    <h1>Confissões a Dois</h1>
+    <p>Explora a vossa intimidade em 5 fases, cada uma mais profunda e reveladora.</p>
+    <button id="start-btn">Começar</button>
+  </div>
+
+  <div id="phase-summary" class="hidden">
+    <h2 id="phase-title"></h2>
+    <p id="phase-description"></p>
+    <button id="continue-btn">Continuar</button>
+  </div>
+
+  <div id="quiz-container" class="hidden">
+    <div id="question"></div>
+    <div id="answers"></div>
+  </div>
+
+  <div id="result" class="hidden">
+    <h2>Resultado</h2>
+    <p id="summary"></p>
+  </div>
+</body>
+</html>
