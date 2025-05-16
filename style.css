@@ -51,19 +51,17 @@ body {
   height: 100vh;
   text-align: center;
 }
-
 .screen {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  max-width: 90%;
 }
 
-.screen.active, .screen:not(.hidden) {
+.screen.active {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-
 button {
   background-color: #b04e77;
   border: none;
