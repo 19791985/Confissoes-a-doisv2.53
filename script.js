@@ -1063,10 +1063,64 @@ function showQuestion() {
     };
     answersEl.appendChild(btn);
   });
-}
-
 function showResult() {
   quizContainer.classList.add("hidden");
   resultScreen.classList.remove("hidden");
-  summaryEl.textContent = "Obrigado pelo teu tempo, pela entrega e por esta partilha íntima. Que esta jornada nos aproxime muito mais.";
+
+  const categorias = {
+    emocao: 0,
+    desejo: 0,
+    submissao: 0,
+    dominancia: 0,
+    curiosidade: 0,
+    seguranca: 0,
+    exploracao: 0,
+    cumplicidade: 0
+  };
+
+  // Analisa cada valor escolhido
+  results.forEach(value => {
+    if (value.includes("emo")) categorias.emocao++;
+    if (value.includes("desejo") || value.includes("excita")) categorias.desejo++;
+    if (value.includes("submiss")) categorias.submissao++;
+    if (value.includes("dominar") || value.includes("comando")) categorias.dominancia++;
+    if (value.includes("curiosa") || value.includes("explorar")) categorias.curiosidade++;
+    if (value.includes("segura") || value.includes("confiança")) categorias.seguranca++;
+    if (value.includes("fantasia") || value.includes("experiencia")) categorias.exploracao++;
+    if (value.includes("cumplicidade") || value.includes("presenca")) categorias.cumplicidade++;
+  });
+
+  let resumo = "Resumo psicológico da jornada:\n\n";
+
+  if (categorias.emocao >= 8) {
+    resumo += "- Procura uma ligação emocional profunda.\n";
+  } else if (categorias.desejo >= 8) {
+    resumo += "- Vive intensamente o desejo e o prazer.\n";
+  }
+
+  if (categorias.curiosidade >= 6) {
+    resumo += "- Demonstra forte curiosidade por novas experiências.\n";
+  }
+
+  if (categorias.submissao > categorias.dominancia) {
+    resumo += "- Mostra vontade de entrega e rendição guiada.\n";
+  } else if (categorias.dominancia > categorias.submissao) {
+    resumo += "- Tem tendências de controlo e condução do momento íntimo.\n";
+  }
+
+  if (categorias.seguranca >= 6) {
+    resumo += "- A confiança é essencial para o seu prazer.\n";
+  }
+
+  if (categorias.exploracao >= 6) {
+    resumo += "- Está pronta para explorar fantasias e novas dimensões da relação.\n";
+  }
+
+  if (categorias.cumplicidade >= 6) {
+    resumo += "- Valoriza uma conexão completa: emocional, física e espiritual.\n";
+  }
+
+  resumo += "\nObrigado pelo teu tempo, pela entrega e por esta partilha íntima. Que esta jornada vos aproxime muito mais.";
+
+  summaryEl.textContent = resumo;
 }
