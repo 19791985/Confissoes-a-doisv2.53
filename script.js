@@ -1026,18 +1026,18 @@ let currentQuestionIndex = 0;
 let results = [];
 
 titleStartBtn.onclick = () => {
-  titleScreen.classList.add("hidden");
-  introScreen.style.display = "block";
+  titleScreen.classList.remove("active");
+  introScreen.classList.add("active");
 };
 
 startBtn.onclick = () => {
-  introScreen.classList.add("hidden");
-  showPhaseSummary();
+  introScreen.classList.remove("active");
+  phaseSummaryScreen.classList.add("active");
 };
 
 continueBtn.onclick = () => {
-  phaseSummaryScreen.classList.add("hidden");
-  quizContainer.classList.remove("hidden");
+  phaseSummaryScreen.classList.remove("active");
+  quizContainer.classList.add("active");
   showQuestion();
 };
 
