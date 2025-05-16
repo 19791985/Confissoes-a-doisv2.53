@@ -1,4 +1,5 @@
-const startBtn = document.getElementById("start-btn");
+const titleScreen = document.getElementById("title-screen");
+const titleStartBtn = document.getElementById("title-start-btn");const startBtn = document.getElementById("start-btn");
 const introScreen = document.getElementById("intro");
 const phaseSummaryScreen = document.getElementById("phase-summary");
 const quizContainer = document.getElementById("quiz-container");
@@ -1022,6 +1023,11 @@ const questions = [
 let currentPhase = 0;
 let currentQuestionIndex = 0;
 let results = [];
+
+titleStartBtn.onclick = () => {
+  titleScreen.classList.add("hidden");
+  introScreen.classList.remove("hidden");
+};
 
 startBtn.onclick = () => {
   introScreen.classList.add("hidden");
