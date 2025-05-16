@@ -1,4 +1,5 @@
 const titleScreen = document.getElementById("title-screen");
+const titleStartBtn = document.getElementById("title-start-btn");const titleScreen = document.getElementById("title-screen");
 const titleStartBtn = document.getElementById("title-start-btn");const startBtn = document.getElementById("start-btn");
 const introScreen = document.getElementById("intro");
 const phaseSummaryScreen = document.getElementById("phase-summary");
