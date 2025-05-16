@@ -1063,6 +1063,7 @@ function showQuestion() {
     };
     answersEl.appendChild(btn);
   });
+}
 function showResult() {
   quizContainer.classList.add("hidden");
   resultScreen.classList.remove("hidden");
