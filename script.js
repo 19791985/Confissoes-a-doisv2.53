@@ -1030,6 +1030,11 @@ titleStartBtn.onclick = () => {
   introScreen.classList.remove("hidden");
 };
 
+titleStartBtn.onclick = () => {
+  titleScreen.classList.add("hidden");
+  introScreen.style.display = "block";
+};
+
 startBtn.onclick = () => {
   introScreen.classList.add("hidden");
   showPhaseSummary();
